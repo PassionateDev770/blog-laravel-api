@@ -47,7 +47,7 @@ class ArticleController extends BaseController
 
     public function destroy(Article $article): JsonResponse
     {
-        //delete stored image first
+        // Delete stored image first
         if (!is_null($article->image)) {
             $this->articleService->delete($article->image);
         }
